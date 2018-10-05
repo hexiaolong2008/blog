@@ -1,4 +1,11 @@
-﻿## **概述**
+﻿---
+title:  "LCD显示异常分析——撕裂(tear effect)"
+date:   2018-02-14 23:37:00
+categories: text
+---
+
+
+## **概述**
 在上一篇[《LCD显示异常分析——开机闪现花屏》](http://blog.csdn.net/hexiaolong2009/article/details/79190789)中，我们一起分析了开机花屏的问题，在这一篇中，我将对LCD撕裂(tear effect)问题进行详细分析，以及给出这类问题的常用解决方法。
 
 本文适用范围：
