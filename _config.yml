@@ -1,7 +1,7 @@
-title: "Blog Title"
-author: "Blog Author"
-description: "Really cool blog about ... something"
-more: "read more »"
+title: "何小龙的博客"
+author: "何小龙 Leon.He"
+description: "经验积累，技术总结"
+more: "阅读全文 »"
 url: "https://hexiaolong2008.github.io/"
 baseurl: "/contrast"
 paginate: 2
@@ -23,7 +23,7 @@ comments:
 
 links: # see http://fontawesome.io/icons/#brand for all possible icons
   - twitter: "https://twitter.com/twitter/"
-  - github: "https://github.com/niklasbuschmann/contrast"
+  - github: "https://github.com/hexiaolong2008/contrast"
   - envelope: "mailto:niklas.buschmann@posteo.de"
 
 defaults: [{scope: {path: ""}, values: {layout: "default"}}, {scope: {path: "", type: "posts"}, values: {comments: true}}]
