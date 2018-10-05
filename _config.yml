@@ -23,7 +23,7 @@ comments:
 
 links: # see http://fontawesome.io/icons/#brand for all possible icons
   - twitter: "https://twitter.com/twitter/"
-  - github: "https://github.com/hexiaolong2008/blog"
+  - github: "https://github.com/hexiaolong2008"
   - envelope: "mailto:343005384@qq.com"
 
 defaults: [{scope: {path: ""}, values: {layout: "default"}}, {scope: {path: "", type: "posts"}, values: {comments: true}}]
