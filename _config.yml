@@ -3,7 +3,7 @@ author: "何小龙 Leon.He"
 description: "经验积累，技术总结"
 more: "阅读全文 »"
 url: "https://hexiaolong2008.github.io/"
-baseurl: "/blog"
+baseurl: ""
 paginate: 2
 permalink: pretty
 excerpt_separator: "\n\n\n" # two blank lines
