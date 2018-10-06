@@ -14,7 +14,6 @@ categories: text
 
 ## **现象**
 首先贴一张动态图，让大家能直观的感受撕裂形成的过程：
-![tear_effect_w1_r3](http://img.blog.csdn.net/20180213195625378)
 [点击这里查看高清图片](http://hexiaolong2008.github.io/image/tear_effect_w1_r3.svg)
 
 ## **分析**
