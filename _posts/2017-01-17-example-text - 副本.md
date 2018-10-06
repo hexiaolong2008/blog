@@ -1,6 +1,6 @@
 ---
-title:  "My Test"
-date:   2018-10-05 23:37:00
+title:  "Lorem ipsum dolor sit amet consectetur adipiscing elit"
+date:   2017-01-17 23:37:00
 categories: text
 ---
 
@@ -10,19 +10,3 @@ The term was coined in 1964 by two [Australian](https://en.wikipedia.org/wiki/Au
 
 
 Some scientists believe that humans appreciate the rain scent because ancestors may have relied on rainy weather for survival.
-
-### Lists
-
-#### Unordered
-
- * lorem
- * ipsum
- * dolor
- * sit amet
-
-#### Ordered
-
-1. lorem
-2. ipsum
-3. dolor
-4. sit amet
