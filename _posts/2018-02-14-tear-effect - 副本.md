@@ -1,7 +1,7 @@
 ﻿---
 title:  "LCD显示异常分析——撕裂(tear effect)-副本"
 date:   2018-02-14 23:37:00
-categories: text
+categories: object
 ---
 
 ## **概述**
