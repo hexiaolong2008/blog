@@ -10,9 +10,9 @@ adb reboot挂死的问题，最终发现与PM Runtime及Generic PM Domain有关�
 ## 直接原因
 reboot导致系统挂死的直接原因是display在resume过程中，disp的power domain被关闭了，导致CPU访问DISP的寄存器挂死。
 
+
 ## 背景
 display驱动的suspend 和 resume操作都是对同一个device进行`pm_runtime_put_sync()`和`pm_runtime_get_sync()`操作，display的power domain寄存器操作是放在了标准的Generic PM Domain框架下的，内部自带引用计数，会随着该domain下关联的设备调用pm_runtime_get/put来决定是否开启/关闭power domain。
-
 
 ## 错误观念
 1. pm_runtime_get/put函数内部有spin lock拿锁保护，因此对同一device的get和put操作在多线程中是互斥的，当get正在执行的时候，put是没有机会得到执行的
