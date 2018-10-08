@@ -44,7 +44,9 @@ display驱动的suspend 和 resume操作都是对同一个device进行`pm_runtim
 
 ## 关键代码
 ### PM Runtime流程
-```
+
+{% highlight c %}
+
 int pm_generic_runtime_suspend(struct device *dev)
 {
     const struct dev_pm_ops *pm = dev->driver ? dev->driver->pm : NULL;
@@ -141,10 +143,10 @@ __releases(&dev->power.lock) __acquires(&dev->power.lock)
     
     return retval;
 }
-```
+{% endhighlight %}
 --------------
 ### Generic PM Domains
-```
+{% highlight c %}
 static int platform_drv_probe(struct device *_dev)
 {
     struct platform_driver *drv = to_platform_driver(_dev->driver);
@@ -185,9 +187,9 @@ static void platform_drv_shutdown(struct device *_dev)
         drv->shutdown(dev);
     dev_pm_domain_detach(_dev, true);
 }
-```
+{% endhighlight %}
 当调用pm_runtime_put_sync()时：
-```
+{% highlight c %}
 static pm_callback_t __rpm_get_callback(struct device *dev, size_t cb_offset)
 {
     pm_callback_t cb;
@@ -288,4 +290,4 @@ static int pm_genpd_default_save_state(struct device *dev)
     /*最终还是调用到platfrom bus的 runtime_suspend，即pm_generic_runtime_suspend */
     return cb ? cb(dev) : 0;
 }
-```
+{% endhighlight %}
