@@ -4,11 +4,8 @@ date:   2018-04-25 16:23:00
 categories: text
 ---
 
-[TOC]
-# 技术分享  
-
 ## 问题
-    adb reboot挂死的问题，最终发现与PM Runtime及Generic PM Domain有关，因此我做了一下经验总结，在这里分享给大家，希望对大家有所帮助。
+adb reboot挂死的问题，最终发现与PM Runtime及Generic PM Domain有关，因此我做了一下经验总结，在这里分享给大家，希望对大家有所帮助。
 
 ## 直接原因
 reboot导致系统挂死的直接原因是display在resume过程中，disp的power domain被关闭了，导致CPU访问DISP的寄存器挂死。
