@@ -1,11 +1,14 @@
-﻿# 最简单的DRM应用程序
-
-标签（空格分隔）： 未分类
-
+﻿---
+title:  "最简单的DRM应用程序"
+date:   2018-10-29 23:20:00
+categories: text
 ---
+
 最近在学习DRM (Direct Rendering Manager)驱动程序，在这里将学习的经验总结分享给大家。
 
 在学习DRM驱动之前，应该首先了解如何使用DRM驱动。以下使用伪代码的方式，简单介绍如何编写一个最简单的DRM应用程序。
+
+
 ```c
 int main(int argc, char **argv)
 {
