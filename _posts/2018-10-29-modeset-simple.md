@@ -38,6 +38,8 @@ int main(int argc, char **argv)
 
 当执行完`mmap`之后，我们就可以直接在应用层对framebuffer进行操作了。
 
+----------
+
 详细参考代码如下：
 ```c
 #define _GNU_SOURCE
