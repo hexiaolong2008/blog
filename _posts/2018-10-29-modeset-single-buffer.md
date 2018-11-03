@@ -1,10 +1,8 @@
 ﻿---
-title:  "最简单的DRM应用程序"
+title:  "最简单的DRM应用程序 （single-buffer）"
 date:   2018-10-29 23:20:00
 categories: text
 ---
-
-最近在学习DRM (Direct Rendering Manager)驱动程序，在这里将学习的经验总结分享给大家。
 
 在学习DRM驱动之前，应该首先了解如何使用DRM驱动。以下使用伪代码的方式，简单介绍如何编写一个最简单的DRM应用程序。
 
@@ -35,6 +33,7 @@ int main(int argc, char **argv)
     drmModeSetCrtc(crtc_id, fb_id, connector_id, mode);
 }
 ```
+
 
 当执行完`mmap`之后，我们就可以直接在应用层对framebuffer进行操作了。
 
@@ -146,11 +145,17 @@ int main(int argc, char **argv)
 > 1. DRM驱动支持MODESET；
 2. DRM驱动支持dumb-buffer(即连续物理内存)；
 3. DRM驱动至少支持1个CRTC，1个Encoder，1个Connector；
-4. DRM驱动的Connector至少支持1个drm_display_mode。
+4. DRM驱动的Connector至少包含1个有效的drm_display_mode。
 
-源码连接：https//xxxx
+运行结果：程序运行后，显示全屏白色，等待用户输入按键；当用户按下任意按键后，程序退出，显示黑屏。
+
+源码下载：[modeset-single-buffer][1]
 
 参考资料：
-David Herrmann's Github: [drm-howto/modeset.c][1] 
+David Herrmann's Blog: [Advanced DRM Mode-Setting API][2]
+David Herrmann's Github: [drm-howto/modeset.c][3] 
 
-[1]: https://github.com/dvdhrm/docs/blob/master/drm-howto/modeset.c
+
+  [1]: https://github.com/hexiaolong2008/sample-code/tree/master/drm/application/modeset-single-buffer
+  [2]: https://dvdhrm.wordpress.com/2012/12/21/advanced-drm-mode-setting-api/
+  [3]: https://github.com/dvdhrm/docs/blob/master/drm-howto/modeset.c
